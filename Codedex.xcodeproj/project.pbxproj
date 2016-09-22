@@ -214,7 +214,7 @@
 				TargetAttributes = {
 					D16116C81D93135A008BDAF5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 324K7JL2HS;
+						DevelopmentTeam = 2483GEC66K;
 					};
 					D16116DF1D93135B008BDAF5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -436,7 +436,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Codedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AndreaRitch.Codedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Codedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -450,7 +450,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Codedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AndreaRitch.Codedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Codedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

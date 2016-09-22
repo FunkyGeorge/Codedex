@@ -45,16 +45,6 @@ class ShowCoderViewController: UIViewController {
         specialtyLabel.text = specialty
     
         
-        CoderModel.getUserByName("Annie") {
-            data, response, error in
-            do {
-                if let results = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
-                        print(results)
-                }
-            } catch {
-                print("Something went wrong")
-            }
-        }
     }
     
     override func didReceiveMemoryWarning() {

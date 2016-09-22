@@ -39,12 +39,7 @@ class ShowCoderViewController: UIViewController {
         imageView.autoresizesSubviews = true
         imageView.image = pickedImage!
         
-        nameLabel.text = name
-        statusLabel.text = status
-        ninjaLabel.text = level
-        specialtyLabel.text = specialty
-    
-        
+<<<<<<< HEAD
         CoderModel.getUserByName("Annie") {
             data, response, error in
             do {
@@ -55,6 +50,14 @@ class ShowCoderViewController: UIViewController {
                 print("Something went wrong")
             }
         }
+=======
+        nameLabel.text = name
+        statusLabel.text = status
+        ninjaLabel.text = level
+        specialtyLabel.text = specialty
+    
+        
+>>>>>>> bccdfd029f05b94fad31189854406d86266b9471
     }
     
     override func didReceiveMemoryWarning() {

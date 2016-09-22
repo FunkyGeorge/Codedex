@@ -11,19 +11,6 @@ import UIKit
 //class ShowCoderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 class ShowCoderViewController: UIViewController {
     
-    
-    var name: String?
-    var status: String?
-    var level: String?
-    var specialty: String?
-    
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var ninjaLabel: UILabel!
-    @IBOutlet weak var specialtyLabel: UILabel!
-    
-    
     @IBOutlet weak var imageView: UIImageView!
     var pickedImage: UIImage! //get this from segue
     
@@ -38,12 +25,6 @@ class ShowCoderViewController: UIViewController {
         imageView.contentMode = .ScaleAspectFit
         imageView.autoresizesSubviews = true
         imageView.image = pickedImage!
-        
-        nameLabel.text = name
-        statusLabel.text = status
-        ninjaLabel.text = level
-        specialtyLabel.text = specialty
-    
         
         CoderModel.getUserByName("Annie") {
             data, response, error in
