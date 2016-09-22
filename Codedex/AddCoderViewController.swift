@@ -59,6 +59,10 @@ class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate,
             let showCoderViewController = navigationController.topViewController as! ShowCoderViewController
             showCoderViewController.pickedImage = sender as! UIImage
             showCoderViewController.cancelButtonDelegate = cancelButtonDelegate
+            showCoderViewController.name = nameTextField.text
+            showCoderViewController.status = statusTextField.text
+            showCoderViewController.level = levelTextField.text
+            showCoderViewController.specialty = specialtyTextField.text
         }
     }
 
