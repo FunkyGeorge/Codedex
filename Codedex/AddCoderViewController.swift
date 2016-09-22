@@ -8,18 +8,33 @@
 
 import UIKit
 
-class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var statusTextField: UITextField!
+    @IBOutlet weak var levelTextField: UITextField!
+    @IBOutlet weak var specialtyTextField: UITextField!
+    
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     var pickedImage: UIImage! //get this from segue
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        scrollView = UIScrollView(frame: view.bounds)
+//        scrollView.contentSize = view.bounds.size
+        
+//        nameTextField.delegate = self
+//        statusTextField.delegate = self
+//        levelTextField.delegate = self
+//        specialtyTextField.delegate = self
 
         //set image view
-        imageView.contentMode = .ScaleAspectFit
-        imageView.autoresizesSubviews = true
-        imageView.image = pickedImage!
+//        imageView.contentMode = .ScaleAspectFit
+//        imageView.autoresizesSubviews = true
+//        imageView.image = pickedImage!
         
     }
 
@@ -29,14 +44,19 @@ class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("yo")
+        scrollView.setContentOffset(CGPointMake(0, 250), animated: true)
     }
-    */
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        print("hi")
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
 
 }
