@@ -8,7 +8,12 @@
 
 import UIKit
 
+<<<<<<< HEAD
 class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+=======
+//class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddCoderViewController: UIViewController {
+>>>>>>> d0506a5a22e8ccfa23d2459124bc9b222c36a611
     
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -28,7 +33,7 @@ class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(pickedImage)
+<<<<<<< HEAD
 //        scrollView = UIScrollView(frame: view.bounds)
 //        scrollView.contentSize = view.bounds.size
         
@@ -37,10 +42,13 @@ class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate,
 //        levelTextField.delegate = self
 //        specialtyTextField.delegate = self
 
+=======
+        print(pickedImage)
+>>>>>>> d0506a5a22e8ccfa23d2459124bc9b222c36a611
         //set image view
-        imageView.contentMode = .ScaleAspectFit
-        imageView.autoresizesSubviews = true
-        imageView.image = pickedImage!
+//        imageView.contentMode = .ScaleAspectFit
+//        imageView.autoresizesSubviews = true
+//        imageView.image = pickedImage!
         
     }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CancelButtonDelegate {
 
     let imagePicker = UIImagePickerController()
     @IBOutlet weak var imageView: UIImageView!
@@ -53,6 +53,8 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
                                         if let subject = transaction["subject"] as? String {
                                             print(subject)
                                             //GET SUBJECT AND PERFORM SEGUE TO VIEW SUBJECT
+                                            print(self.imageView.image)
+                                            self.performSegueWithIdentifier("ShowCoderSegue", sender: self.imageView.image)
                                             
                                         }
                                     } else {
@@ -147,9 +149,25 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "AddCoderSegue" {
-            let addCoderViewController = segue.destinationViewController as! AddCoderViewController
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let addCoderViewController = navigationController.topViewController as! AddCoderViewController
             addCoderViewController.pickedImage = sender as! UIImage
+            addCoderViewController.cancelButtonDelegate = self
         }
+        if segue.identifier == "ShowCoderSegue" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let showCoderViewController = navigationController.topViewController as! ShowCoderViewController
+            showCoderViewController.pickedImage = sender as! UIImage
+            showCoderViewController.cancelButtonDelegate = self
+        }
+    }
+    
+//    func cancelButtonPressedFrom(controller: UIViewController){
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+    
+    func cancelButtonPressedFrom(){
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 
