@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 //TAKE THESE OUT BEFORE GITHUB
-var app_id = ""  //insert id
-var app_key = "" //insert key
+var app_id = "99481d3a"  //insert id
+var app_key = "405111b99cafc94ee4ef79f6edcd9a9b" //insert key
 
 class CodedexModel {
     
@@ -33,7 +33,7 @@ class CodedexModel {
             request.setValue(app_key, forHTTPHeaderField: "app_key")
             do {
                 let encodedImage = encodeImage(image)
-                request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(["image":encodedImage, "gallery_name":"allFaces"], options: .PrettyPrinted)
+                request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(["image":encodedImage, "gallery_name":"allFaces2"], options: .PrettyPrinted)
                 let session = NSURLSession.sharedSession()
                 let task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
                 task.resume()

@@ -20,6 +20,7 @@
 		D16117001D93285A008BDAF5 /* CodedexModelLambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16116FF1D93285A008BDAF5 /* CodedexModelLambda.swift */; };
 		D1B4D9D51D941C020056F93D /* AddCoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4D9D41D941C020056F93D /* AddCoderViewController.swift */; };
 		D1B4D9D71D9447DA0056F93D /* ShowCoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4D9D61D9447DA0056F93D /* ShowCoderViewController.swift */; };
+		D1B4D9D91D94848E0056F93D /* CoderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4D9D81D94848E0056F93D /* CoderModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D16116FF1D93285A008BDAF5 /* CodedexModelLambda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodedexModelLambda.swift; sourceTree = "<group>"; };
 		D1B4D9D41D941C020056F93D /* AddCoderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCoderViewController.swift; sourceTree = "<group>"; };
 		D1B4D9D61D9447DA0056F93D /* ShowCoderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCoderViewController.swift; sourceTree = "<group>"; };
+		D1B4D9D81D94848E0056F93D /* CoderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D16116D01D93135A008BDAF5 /* Main.storyboard */,
 				D1B4D9D41D941C020056F93D /* AddCoderViewController.swift */,
 				D16116FD1D931720008BDAF5 /* CodedexModel.swift */,
+				D1B4D9D81D94848E0056F93D /* CoderModel.swift */,
 				D16116FF1D93285A008BDAF5 /* CodedexModelLambda.swift */,
 				D16116D61D93135A008BDAF5 /* Assets.xcassets */,
 				D16116D81D93135A008BDAF5 /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 			files = (
 				D16116CF1D93135A008BDAF5 /* TakePhotoViewController.swift in Sources */,
 				D16117001D93285A008BDAF5 /* CodedexModelLambda.swift in Sources */,
+				D1B4D9D91D94848E0056F93D /* CoderModel.swift in Sources */,
 				CE5135BD1D94581400747080 /* CancelButtonDelegate.swift in Sources */,
 				D1B4D9D51D941C020056F93D /* AddCoderViewController.swift in Sources */,
 				D1B4D9D71D9447DA0056F93D /* ShowCoderViewController.swift in Sources */,

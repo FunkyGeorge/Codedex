@@ -50,7 +50,23 @@ class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func addCoderButtonPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("ShowCoderSegue", sender: self.imageView.image)
+        //add to database!!
+        let name = nameTextField.text!
+        let status = statusTextField.text!
+        let level = levelTextField.text!
+        let specialty = specialtyTextField.text!
+        CoderModel.addUser(name, status: status, level: level, specialty: specialty) {
+            data, response, error in
+            do {
+                if let results = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+                    print(results)
+                }
+            } catch {
+                print("Something went wrong")
+            }
+            self.performSegueWithIdentifier("ShowCoderSegue", sender: self.imageView.image)
+        }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

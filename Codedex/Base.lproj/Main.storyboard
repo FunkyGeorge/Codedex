@@ -137,6 +137,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U2-dq-YC0">
                                                 <rect key="frame" x="263" y="527" width="74" height="30"/>
                                                 <state key="normal" title="Add Coder"/>
+                                                <connections>
+                                                    <action selector="addCoderButtonPressed:" destination="wDk-nR-hXS" eventType="touchUpInside" id="4DY-Rr-GoQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
