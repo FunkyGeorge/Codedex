@@ -8,14 +8,19 @@
 
 import UIKit
 
-class ShowCoderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//class ShowCoderViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ShowCoderViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     var pickedImage: UIImage! //get this from segue
     
+    weak var cancelButtonDelegate: CancelButtonDelegate?
+    @IBAction func homeButtonPressed(sender: UIBarButtonItem) {
+        cancelButtonDelegate?.cancelButtonPressedFrom()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //set image view
         imageView.contentMode = .ScaleAspectFit
         imageView.autoresizesSubviews = true

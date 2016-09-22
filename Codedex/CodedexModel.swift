@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 //TAKE THESE OUT BEFORE GITHUB
-var app_id = ""  //insert id
-var app_key = "" //insert key
+var app_id = "99481d3a"  //insert id
+var app_key = "405111b99cafc94ee4ef79f6edcd9a9b" //insert key
 
 class CodedexModel {
     

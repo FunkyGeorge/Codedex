@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE5135BD1D94581400747080 /* CancelButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5135BC1D94581400747080 /* CancelButtonDelegate.swift */; };
 		D16116CD1D93135A008BDAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16116CC1D93135A008BDAF5 /* AppDelegate.swift */; };
 		D16116CF1D93135A008BDAF5 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16116CE1D93135A008BDAF5 /* TakePhotoViewController.swift */; };
 		D16116D21D93135A008BDAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D16116D01D93135A008BDAF5 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE5135BC1D94581400747080 /* CancelButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButtonDelegate.swift; sourceTree = "<group>"; };
 		D16116C91D93135A008BDAF5 /* Codedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D16116CC1D93135A008BDAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D16116CE1D93135A008BDAF5 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				D16116D81D93135A008BDAF5 /* LaunchScreen.storyboard */,
 				D16116DB1D93135A008BDAF5 /* Info.plist */,
 				D16116D31D93135A008BDAF5 /* Codedex.xcdatamodeld */,
+				CE5135BC1D94581400747080 /* CancelButtonDelegate.swift */,
 			);
 			path = Codedex;
 			sourceTree = "<group>";
@@ -208,7 +211,7 @@
 				TargetAttributes = {
 					D16116C81D93135A008BDAF5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 324K7JL2HS;
+						DevelopmentTeam = 2483GEC66K;
 					};
 					D16116DF1D93135B008BDAF5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -276,6 +279,7 @@
 			files = (
 				D16116CF1D93135A008BDAF5 /* TakePhotoViewController.swift in Sources */,
 				D16117001D93285A008BDAF5 /* CodedexModelLambda.swift in Sources */,
+				CE5135BD1D94581400747080 /* CancelButtonDelegate.swift in Sources */,
 				D1B4D9D51D941C020056F93D /* AddCoderViewController.swift in Sources */,
 				D1B4D9D71D9447DA0056F93D /* ShowCoderViewController.swift in Sources */,
 				D16116D51D93135A008BDAF5 /* Codedex.xcdatamodeld in Sources */,
@@ -428,7 +432,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Codedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AndreaRitch.Codedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Codedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -442,7 +446,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Codedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AndreaRitch.Codedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Codedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
