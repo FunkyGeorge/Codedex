@@ -64,7 +64,11 @@ class AddCoderViewController: UIViewController, UIImagePickerControllerDelegate,
             } catch {
                 print("Something went wrong")
             }
+            CodedexModel.submitImageForEnrollment(self.pickedImage, andId: name) {
+                data, response, error in
+            }
             self.performSegueWithIdentifier("ShowCoderSegue", sender: self.imageView.image)
+
         }
         
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+var faceName: String?
 
 class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CancelButtonDelegate {
 
@@ -54,6 +55,8 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
                                             print(subject)
                                             //GET SUBJECT AND PERFORM SEGUE TO VIEW SUBJECT
                                             print(self.imageView.image)
+                                            faceName = subject
+                                            
                                             self.performSegueWithIdentifier("ShowCoderSegue", sender: self.imageView.image)
                                             
                                         }
@@ -155,10 +158,27 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
             addCoderViewController.cancelButtonDelegate = self
         }
         if segue.identifier == "ShowCoderSegue" {
+            
             let navigationController = segue.destinationViewController as! UINavigationController
             let showCoderViewController = navigationController.topViewController as! ShowCoderViewController
             showCoderViewController.pickedImage = sender as! UIImage
             showCoderViewController.cancelButtonDelegate = self
+            
+            CoderModel.getUserByName(faceName!) {
+                data, response, error in
+                do {
+                    if let results = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+                        print(results)
+                        showCoderViewController.name = results["name"] as! String
+                        showCoderViewController.status = results["status"] as! String
+                        showCoderViewController.level = results["level"] as! String
+                        showCoderViewController.specialty = results["specialty"] as! String
+                    }
+                    
+                } catch {
+                    print("Something went wrong")
+                }
+            }
         }
     }
     

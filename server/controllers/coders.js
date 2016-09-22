@@ -6,7 +6,7 @@ module.exports = (function() {
 
 		//get one coder
 		index: function(req, res) {
-			Coder.find({"name": req.params.name}, function(err, results) {
+			Coder.findOne({"name": req.params.name}, function(err, results) {
 				if (err) {
 					console.log(err);
 				} else {
