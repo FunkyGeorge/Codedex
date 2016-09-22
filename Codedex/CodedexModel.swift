@@ -9,16 +9,17 @@
 import Foundation
 import UIKit
 
-var app_id = "3a"
-var app_key = "4"
+var app_id = ""  //insert id
+var app_key = "" //insert key
 
 class CodedexModel {
     
     
     
     static func encodeImage(image: UIImage) -> String {
-        let imageData: NSData = UIImagePNGRepresentation(image)!
-        let strBase64: String = imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+        let imageData = UIImageJPEGRepresentation(image, 1.0)!  //changed this to JPEG from PNG
+        //let strBase64: String = imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+        let strBase64 = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0)) // new base64 encoding
         return strBase64
     }
     
@@ -50,7 +51,9 @@ class CodedexModel {
             request.setValue(app_key, forHTTPHeaderField: "app_key")
             do {
                 let encodedImage = encodeImage(image)
-                request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(["image":encodedImage, "gallery_name":"allFaces", "subject_id":andId], options: .PrettyPrinted)
+                //let encodedImage = ""
+                //print(encodedImage)
+                request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(["image":encodedImage, "gallery_name":"allFaces", "subject_id":andId, "selector": "SETPOSE"], options: .PrettyPrinted)
                 let session = NSURLSession.sharedSession()
                 let task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
                 task.resume()
