@@ -17,6 +17,8 @@
 		D16116F01D93135B008BDAF5 /* CodedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16116EF1D93135B008BDAF5 /* CodedexUITests.swift */; };
 		D16116FE1D931720008BDAF5 /* CodedexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16116FD1D931720008BDAF5 /* CodedexModel.swift */; };
 		D16117001D93285A008BDAF5 /* CodedexModelLambda.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16116FF1D93285A008BDAF5 /* CodedexModelLambda.swift */; };
+		D1B4D9D51D941C020056F93D /* AddCoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4D9D41D941C020056F93D /* AddCoderViewController.swift */; };
+		D1B4D9D71D9447DA0056F93D /* ShowCoderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B4D9D61D9447DA0056F93D /* ShowCoderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		D16116F11D93135B008BDAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D16116FD1D931720008BDAF5 /* CodedexModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodedexModel.swift; sourceTree = "<group>"; };
 		D16116FF1D93285A008BDAF5 /* CodedexModelLambda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodedexModelLambda.swift; sourceTree = "<group>"; };
+		D1B4D9D41D941C020056F93D /* AddCoderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCoderViewController.swift; sourceTree = "<group>"; };
+		D1B4D9D61D9447DA0056F93D /* ShowCoderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCoderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				D16116CC1D93135A008BDAF5 /* AppDelegate.swift */,
+				D1B4D9D61D9447DA0056F93D /* ShowCoderViewController.swift */,
 				D16116CE1D93135A008BDAF5 /* TakePhotoViewController.swift */,
 				D16116D01D93135A008BDAF5 /* Main.storyboard */,
+				D1B4D9D41D941C020056F93D /* AddCoderViewController.swift */,
 				D16116FD1D931720008BDAF5 /* CodedexModel.swift */,
 				D16116FF1D93285A008BDAF5 /* CodedexModelLambda.swift */,
 				D16116D61D93135A008BDAF5 /* Assets.xcassets */,
@@ -202,7 +208,7 @@
 				TargetAttributes = {
 					D16116C81D93135A008BDAF5 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 2483GEC66K;
+						DevelopmentTeam = 324K7JL2HS;
 					};
 					D16116DF1D93135B008BDAF5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -270,6 +276,8 @@
 			files = (
 				D16116CF1D93135A008BDAF5 /* TakePhotoViewController.swift in Sources */,
 				D16117001D93285A008BDAF5 /* CodedexModelLambda.swift in Sources */,
+				D1B4D9D51D941C020056F93D /* AddCoderViewController.swift in Sources */,
+				D1B4D9D71D9447DA0056F93D /* ShowCoderViewController.swift in Sources */,
 				D16116D51D93135A008BDAF5 /* Codedex.xcdatamodeld in Sources */,
 				D16116FE1D931720008BDAF5 /* CodedexModel.swift in Sources */,
 				D16116CD1D93135A008BDAF5 /* AppDelegate.swift in Sources */,
@@ -420,7 +428,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Codedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Codedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndreaRitch.Codedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -434,7 +442,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Codedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Codedex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndreaRitch.Codedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

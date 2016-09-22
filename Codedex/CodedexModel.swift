@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//TAKE THESE OUT BEFORE GITHUB
 var app_id = ""  //insert id
 var app_key = "" //insert key
 
