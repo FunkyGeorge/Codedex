@@ -12,7 +12,7 @@ class CoderModel {
     
     //get a coder
     static func getUserByName(name: String, completionHandler: (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void) {
-        let url = NSURL(string: "http://Annie-MacBook.local:7000/name/\(name)")
+        let url = NSURL(string: "http://10.0.0.179:7000/name/\(name)")
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!, completionHandler: completionHandler)
         task.resume()
@@ -20,7 +20,7 @@ class CoderModel {
     
     //add a coder
     static func addUser(name: String, status: String, level: String, specialty: String, completionHandler: (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void) {
-        if let urlToReq = NSURL(string: "http://Annie-MacBook.local:7000/names") {
+        if let urlToReq = NSURL(string: "http://10.0.0.179:7000/names") {
             let request = NSMutableURLRequest(URL: urlToReq)
             request.HTTPMethod = "POST"
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
